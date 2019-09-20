@@ -3,6 +3,8 @@ package com.cultivation.javaBasic.showYourIntelligence;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class DistinctIterable<T> implements Iterable<T> {
     private Iterable<T> iterable;
@@ -36,29 +38,17 @@ class DistinctIterator<E> implements Iterator<E> {
                 listToIterate.add(eachIteratorObject);
             }
         });
-        this.iterator = iterator;
+        this.iterator = listToIterate.iterator();
     }
 
     @Override
     public boolean hasNext() {
-        try{
-            return iterator.hasNext();
-        }
-        catch(NotImplementedException ex)
-        {
-            throw ex;
-        }
+        return iterator.hasNext();
     }
 
     @Override
     public E next() {
-        try{
-            return iterator.next();
-        }
-        catch(NotImplementedException ex)
-        {
-            throw ex;
-        }
+        return iterator.next();
         //throw new NotImplementedException();
     }
     // --end->
