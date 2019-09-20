@@ -75,5 +75,30 @@ The hint indicates that we should not write concrete number here. So I should no
 
 You could run unit tests with the help of IntelliJ. But it is also possible to run unit test via command line: `./gradlew build`.
 
-If you just want to build your code without running test. Please use `./gradlew build -x test
-`
+If you just want to build your code without running test. Please use `./gradlew build -x test`
+
+# Answers
+##CollectionsTest
+Official document: https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html
+##DistinctIterable
+Official document: https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html
+##Sequence
+Official document: https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html
+##MyStack
+
+1. What is the knowledge point of the test? Where is the offical document to the knowledge point?
+The knowledge point of the test is to be able to implement Java's Collections.
+to iterate through an array list; to dynamically allocate array storage based on the capacity of a list.
+
+1. Why the test failed at first?
+Missing iteration conditions in methods.
+No iteration condition inside the DistinctIterator class.
+No implementation of methods.
+
+1. Why you corrected the test that way?
+To be able to utilize Java Collections.
+To be able to iterate through an array list.
+To allocate array storage properly.
+
+1. Do you have further questions on this knowledge point?
+N/A
